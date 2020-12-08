@@ -41,7 +41,7 @@
 
             <div class="col-4 ml-4 px-3">
                 <div class="col bg-light rounded-lg pt-2" style="box-shadow: 0 0 5px black;">
-                    <p class="navbar-brand" style="font-size: 24px;" id="answer">Answer: </p>
+                    <p class="navbar-brand" style="font-size: 24px;" id="answer">Result: </p>
                 </div>
             </div>
 
@@ -51,7 +51,12 @@
 
     <script>
         function Calc() {
-            document.getElementById('answer').innerHTML = "Result: " + eval(document.getElementById('valueBox').value);
+            if (!document.getElementById('valueBox').value) {
+                document.getElementById('answer').innerHTML = "Result: " + 0;
+            }
+            else {
+                document.getElementById('answer').innerHTML = "Result: " + eval(document.getElementById('valueBox').value);
+            }
         }
 
     </script>
