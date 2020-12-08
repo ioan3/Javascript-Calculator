@@ -33,15 +33,15 @@
                 <button type="button" class="col-3 btn btn-dark ml-1 mb-2" onclick="document.getElementById('valueBox').value += 3">3</button>
                 <button type="button" class="col-2 btn btn-dark ml-1 mb-2" onclick="document.getElementById('valueBox').value += '+'">+</button>
 
-                <button type="button" class="col-3 btn btn-dark ml mb-3">.</button>
+                <button type="button" class="col-3 btn btn-dark ml mb-3" onclick="document.getElementById('valueBox').value += '.'">.</button>
                 <button type="button" class="col-3 btn btn-dark ml-1 mb-3" onclick="document.getElementById('valueBox').value += 0">0</button>
                 <button type="button" class="col-3 btn btn-danger ml-1 mb-3" onclick="document.getElementById('valueBox').value = ''">C</button>
                 <button type="button" class="col-2 btn btn-dark ml-1 mb-3" onclick="document.getElementById('valueBox').value += '-'">-</button>
             </div>
 
-            <div class="col-3 ml-4 px-3">
-                <div class="col bg-light rounded-lg " style="box-shadow: 0 0 5px black;">
-                    <p class="navbar-brand" style="font-size: 16px;" id="answer"></p>
+            <div class="col-4 ml-4 px-3">
+                <div class="col bg-light rounded-lg pt-2" style="box-shadow: 0 0 5px black;">
+                    <p class="navbar-brand" style="font-size: 24px;" id="answer">Answer: </p>
                 </div>
             </div>
 
