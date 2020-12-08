@@ -16,7 +16,7 @@ function Numbers(number) {
 
 function Operator(operator) {
     if (operatorCounter == true) {
-        valueBox.value += operator;
+        valueBox.value += " " + operator +" ";
         operatorCounter = false;
         dotCounter = false;
         hasDot = false;
