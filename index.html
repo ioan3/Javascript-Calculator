@@ -16,28 +16,28 @@
 
                     <p class="navbar-brand mt-0 " style="font-size: 18px;">JavaScript Calculator</p>
 
-                    <input type="text" class="col-8 form-control" id="valueBox">
+                    <input type="text" class="col-8 form-control disabled" id="valueBox" readonly style="background-color: white;">
                     <button type="button" class="col-3 btn btn-dark ml-3 mb-3" onclick="Calc()">=</button>
 
-                    <button type="button" class="col-3 btn btn-dark ml mb-2" onclick="document.getElementById('valueBox').value += 7">7</button>
-                    <button type="button" class="col-3 btn btn-dark ml-1 mb-2" onclick="document.getElementById('valueBox').value += 8">8</button>
-                    <button type="button" class="col-3 btn btn-dark ml-1 mb-2" onclick="document.getElementById('valueBox').value += 9">9</button>
-                    <button type="button" class="col-2 btn btn-dark ml-1 mb-2" onclick="document.getElementById('valueBox').value += '*'">*</button>
+                    <button type="button" class="col-3 btn btn-dark ml mb-2" onclick="Numbers(7)">7</button>
+                    <button type="button" class="col-3 btn btn-dark ml-1 mb-2" onclick="Numbers(8)">8</button>
+                    <button type="button" class="col-3 btn btn-dark ml-1 mb-2" onclick="Numbers(9)">9</button>
+                    <button type="button" class="col-2 btn btn-dark ml-1 mb-2" onclick="Operator('*')">*</button>
 
-                    <button type="button" class="col-3 btn btn-dark ml mb-2" onclick="document.getElementById('valueBox').value += 4">4</button>
-                    <button type="button" class="col-3 btn btn-dark ml-1 mb-2" onclick="document.getElementById('valueBox').value += 5">5</button>
-                    <button type="button" class="col-3 btn btn-dark ml-1 mb-2" onclick="document.getElementById('valueBox').value += 6">6</button>
-                    <button type="button" class="col-2 btn btn-dark ml-1 mb-2" onclick="document.getElementById('valueBox').value += '/'">/</button>
+                    <button type="button" class="col-3 btn btn-dark ml mb-2" onclick="Numbers(4)">4</button>
+                    <button type="button" class="col-3 btn btn-dark ml-1 mb-2" onclick="Numbers(5)">5</button>
+                    <button type="button" class="col-3 btn btn-dark ml-1 mb-2" onclick="Numbers(6)">6</button>
+                    <button type="button" class="col-2 btn btn-dark ml-1 mb-2" onclick="Operator('/')">/</button>
 
-                    <button type="button" class="col-3 btn btn-dark ml mb-2" onclick="document.getElementById('valueBox').value += 1">1</button>
-                    <button type="button" class="col-3 btn btn-dark ml-1 mb-2" onclick="document.getElementById('valueBox').value += 2">2</button>
-                    <button type="button" class="col-3 btn btn-dark ml-1 mb-2" onclick="document.getElementById('valueBox').value += 3">3</button>
-                    <button type="button" class="col-2 btn btn-dark ml-1 mb-2" onclick="document.getElementById('valueBox').value += '+'">+</button>
+                    <button type="button" class="col-3 btn btn-dark ml mb-2" onclick="Numbers(1)">1</button>
+                    <button type="button" class="col-3 btn btn-dark ml-1 mb-2" onclick="Numbers(2)">2</button>
+                    <button type="button" class="col-3 btn btn-dark ml-1 mb-2" onclick="Numbers(3)">3</button>
+                    <button type="button" class="col-2 btn btn-dark ml-1 mb-2" onclick="Operator('+')">+</button>
 
-                    <button type="button" class="col-3 btn btn-dark ml mb-3" onclick="document.getElementById('valueBox').value += '.'">.</button>
-                    <button type="button" class="col-3 btn btn-dark ml-1 mb-3" onclick="document.getElementById('valueBox').value += 0">0</button>
-                    <button type="button" class="col-3 btn btn-danger ml-1 mb-3" onclick="document.getElementById('valueBox').value = ''">C</button>
-                    <button type="button" class="col-2 btn btn-dark ml-1 mb-3" onclick="document.getElementById('valueBox').value += '-'">-</button>
+                    <button type="button" class="col-3 btn btn-dark ml mb-3" onclick="Dot()">.</button>
+                    <button type="button" class="col-3 btn btn-dark ml-1 mb-3" onclick="Numbers(0)">0</button>
+                    <button type=" button" class="col-3 btn btn-danger ml-1 mb-3" onclick="Clear()">C</button>
+                    <button type="button" class="col-2 btn btn-dark ml-1 mb-3" onclick="Operator('-')">-</button>
                 </div>
 
                 <div class="col-4 ml-4 px-3">
@@ -51,13 +51,56 @@
     </div>
 
     <script>
+
+        var ValueBox = document.getElementById('valueBox');
+        var Answer = document.getElementById('answer');
+        var Result = 0;
+        var operatorCounter = false;
+        var dotCounter = false;
+        var hasDot = false;
+
+        function Numbers(number) {
+            ValueBox.value += number;
+            operatorCounter = true;
+            dotCounter = true;
+            if(hasDot == true) {
+                dotCounter = false;
+            }
+        }
+
+        function Operator(operator) {
+            if (operatorCounter == true) {
+                valueBox.value += operator;
+                operatorCounter = false;
+                dotCounter = false;
+                hasDot = false;
+            }
+        }
+
+        function Dot() {
+            if (dotCounter == true) {
+                ValueBox.value += '.';
+                dotCounter = false;
+                operatorCounter = false;
+                hasDot = true;
+            }
+        }
+
+        function Clear() {
+            ValueBox.value = '';
+            dotCounter = false;
+            operatorCounter = false;
+        }
+
         function Calc() {
-            if (!document.getElementById('valueBox').value) {
-                document.getElementById('answer').innerHTML = "Result: " + 0;
+            if (!ValueBox.value) {
+                ValueBox.innerHTML = "Result: " + 0;
             }
             else {
-                document.getElementById('answer').innerHTML = "Result: " + eval(document.getElementById('valueBox').value);
+                Result = eval(ValueBox.value);
+                Answer.innerHTML = "Result: " + Result;
             }
+
         }
 
     </script>
