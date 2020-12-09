@@ -1,5 +1,5 @@
 var ValueBox = document.getElementById('valueBox');
-var Answer = document.getElementById('answer');
+//var Answer = document.getElementById('answer');
 var Result = 0;
 var operatorCounter = false;
 var dotCounter = false;
@@ -16,7 +16,7 @@ function Numbers(number) {
 
 function Operator(operator) {
     if (operatorCounter == true) {
-        valueBox.value += " " + operator +" ";
+        valueBox.value += " " + operator + " ";
         operatorCounter = false;
         dotCounter = false;
         hasDot = false;
@@ -38,13 +38,20 @@ function Clear() {
     operatorCounter = false;
 }
 
+
 function Calc() {
     if (!ValueBox.value) {
         ValueBox.innerHTML = "Result: " + 0;
     }
     else {
         Result = eval(ValueBox.value);
-        Answer.innerHTML = "Result: " + Result;
-    }
+        // Answer.innerHTML = "Result: " + Result;
 
+        var P = document.createElement('p');
+        P.className = 'navbar-brand col-12';
+        P.innerHTML = "(" + ValueBox.value + ")" + " = " + Result;
+        P.style.fontSize = "18px";
+        document.getElementById('newP').appendChild(P);
+    }
+    
 }

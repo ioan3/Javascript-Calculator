@@ -12,38 +12,40 @@
 
     <div class="container-fluid">
         <div class="container">
-            <div class="row mt-4 ">
-                <div class="row col-3 bg-light rounded-lg px-3 py-1" style="box-shadow: 0 0 5px black;">
+            <div class="row col-12 mt-4 ">
+                <div class="col-3">
+                    <div class="row  bg-light rounded-lg px-3 py-1" style="box-shadow: 0 0 5px black;">
+                        <p class="navbar-brand mt-0 " style="font-size: 18px;">JavaScript Calculator</p>
 
-                    <p class="navbar-brand mt-0 " style="font-size: 18px;">JavaScript Calculator</p>
+                        <input type="text" class="col-8 form-control disabled" id="valueBox" readonly style="background-color: white;">
+                        <button type="button" class="col-3 btn btn-dark ml-3 mb-3" onclick="Calc()">=</button>
 
-                    <input type="text" class="col-8 form-control disabled" id="valueBox" readonly style="background-color: white;">
-                    <button type="button" class="col-3 btn btn-dark ml-3 mb-3" onclick="Calc()">=</button>
+                        <button type="button" class="col-3 btn btn-dark ml mb-2" onclick="Numbers(7)">7</button>
+                        <button type="button" class="col-3 btn btn-dark ml-1 mb-2" onclick="Numbers(8)">8</button>
+                        <button type="button" class="col-3 btn btn-dark ml-1 mb-2" onclick="Numbers(9)">9</button>
+                        <button type="button" class="col-2 btn btn-dark ml-1 mb-2" onclick="Operator('*')">*</button>
 
-                    <button type="button" class="col-3 btn btn-dark ml mb-2" onclick="Numbers(7)">7</button>
-                    <button type="button" class="col-3 btn btn-dark ml-1 mb-2" onclick="Numbers(8)">8</button>
-                    <button type="button" class="col-3 btn btn-dark ml-1 mb-2" onclick="Numbers(9)">9</button>
-                    <button type="button" class="col-2 btn btn-dark ml-1 mb-2" onclick="Operator('*')">*</button>
+                        <button type="button" class="col-3 btn btn-dark ml mb-2" onclick="Numbers(4)">4</button>
+                        <button type="button" class="col-3 btn btn-dark ml-1 mb-2" onclick="Numbers(5)">5</button>
+                        <button type="button" class="col-3 btn btn-dark ml-1 mb-2" onclick="Numbers(6)">6</button>
+                        <button type="button" class="col-2 btn btn-dark ml-1 mb-2" onclick="Operator('/')">/</button>
 
-                    <button type="button" class="col-3 btn btn-dark ml mb-2" onclick="Numbers(4)">4</button>
-                    <button type="button" class="col-3 btn btn-dark ml-1 mb-2" onclick="Numbers(5)">5</button>
-                    <button type="button" class="col-3 btn btn-dark ml-1 mb-2" onclick="Numbers(6)">6</button>
-                    <button type="button" class="col-2 btn btn-dark ml-1 mb-2" onclick="Operator('/')">/</button>
+                        <button type="button" class="col-3 btn btn-dark ml mb-2" onclick="Numbers(1)">1</button>
+                        <button type="button" class="col-3 btn btn-dark ml-1 mb-2" onclick="Numbers(2)">2</button>
+                        <button type="button" class="col-3 btn btn-dark ml-1 mb-2" onclick="Numbers(3)">3</button>
+                        <button type="button" class="col-2 btn btn-dark ml-1 mb-2" onclick="Operator('+')">+</button>
 
-                    <button type="button" class="col-3 btn btn-dark ml mb-2" onclick="Numbers(1)">1</button>
-                    <button type="button" class="col-3 btn btn-dark ml-1 mb-2" onclick="Numbers(2)">2</button>
-                    <button type="button" class="col-3 btn btn-dark ml-1 mb-2" onclick="Numbers(3)">3</button>
-                    <button type="button" class="col-2 btn btn-dark ml-1 mb-2" onclick="Operator('+')">+</button>
-
-                    <button type="button" class="col-3 btn btn-dark ml mb-3" onclick="Dot()">.</button>
-                    <button type="button" class="col-3 btn btn-dark ml-1 mb-3" onclick="Numbers(0)">0</button>
-                    <button type=" button" class="col-3 btn btn-danger ml-1 mb-3" onclick="Clear()">C</button>
-                    <button type="button" class="col-2 btn btn-dark ml-1 mb-3" onclick="Operator('-')">-</button>
+                        <button type="button" class="col-3 btn btn-dark ml mb-3" onclick="Dot()">.</button>
+                        <button type="button" class="col-3 btn btn-dark ml-1 mb-3" onclick="Numbers(0)">0</button>
+                        <button type=" button" class="col-3 btn btn-danger ml-1 mb-3" onclick="Clear()">C</button>
+                        <button type="button" class="col-2 btn btn-dark ml-1 mb-3" onclick="Operator('-')">-</button>
+                    </div>
                 </div>
 
                 <div class="col-4 ml-4 px-3">
-                    <div class="col bg-light rounded-lg pt-2" style="box-shadow: 0 0 5px black;">
-                        <p class="navbar-brand" style="font-size: 24px;" id="answer">Result: </p>
+                    <div id='newP' class="col bg-light rounded-lg pt-2" style="box-shadow: 0 0 5px black;">
+                        <p class="navbar-brand col-12" style="font-size: 24px;" id="answer">History </p>
+                        <hr class="bg-dark my-0">
                     </div>
                 </div>
 
