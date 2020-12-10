@@ -1,5 +1,4 @@
 var ValueBox = document.getElementById('valueBox');
-//var Answer = document.getElementById('answer');
 var Result = 0;
 var operatorCounter = false;
 var dotCounter = false;
@@ -54,5 +53,5 @@ function Calc() {
         P.innerHTML = "<strong>" + ValueBox.value + "</strong>" + " = " + Result;
         document.getElementById('newP').appendChild(P);
     }
-    
+
 }
