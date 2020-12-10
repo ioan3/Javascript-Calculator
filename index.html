@@ -6,48 +6,52 @@
     <link rel="stylesheet" href="css/bootstrap-grid.css">
     <link rel="stylesheet" href="css/bootstrap-reboot.css">
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <div class="container-fluid">
         <div class="container">
-            <div class="row col-12 mt-4 ">
-                <div class="col-3">
-                    <div class="row  bg-light rounded-lg px-3 py-1" style="box-shadow: 0 0 5px black;">
-                        <p class="navbar-brand mt-0 " style="font-size: 18px;">JavaScript Calculator</p>
+            <div class="row col-12 mt-4">
+                <div class="col-lg-3 col-md-11 mx-md-auto mx-lg-0">
+                    <div class="row bg-light rounded-lg px-3 py-1" style="box-shadow: 0 0 5px black;">
+                        <p class="navbar-brand mt-0 px-1 col-12 fontSize">JavaScript Calculator</p>
 
-                        <input type="text" class="col-8 form-control disabled" id="valueBox" readonly style="background-color: white;">
-                        <button type="button" class="col-3 btn btn-dark ml-3 mb-3" onclick="Calc()">=</button>
+                        <input type="text" class="col-12 form-control disabled mb-lg-2 mb-md-4 formHeight fontSize mx-auto" id="valueBox" readonly style="background-color: white;">
 
-                        <button type="button" class="col-3 btn btn-dark ml mb-2" onclick="Numbers(7)">7</button>
-                        <button type="button" class="col-3 btn btn-dark ml-1 mb-2" onclick="Numbers(8)">8</button>
-                        <button type="button" class="col-3 btn btn-dark ml-1 mb-2" onclick="Numbers(9)">9</button>
-                        <button type="button" class="col-2 btn btn-dark ml-1 mb-2" onclick="Operator('*')">*</button>
+                        <button type="button" class="col-3 btn btn-dark mb-lg-2 mb-md-4 py-md-3 py-lg-2 fontSize mx-auto" onclick="Numbers(7)">7</button>
+                        <button type="button" class="col-3 btn btn-dark ml-md-2 mb-md-4 ml-lg-1 mb-lg-2 fontSize mx-auto" onclick="Numbers(8)">8</button>
+                        <button type="button" class="col-3 btn btn-dark ml-md-2 mb-md-4 ml-lg-1 mb-lg-2 fontSize mx-auto" onclick="Numbers(9)">9</button>
+                        <button type="button" class="col-2 btn btn-dark ml-md-2 mb-md-4 ml-lg-1 mb-lg-2 fontSize mx-auto" onclick="Operator('*')">*</button>
 
-                        <button type="button" class="col-3 btn btn-dark ml mb-2" onclick="Numbers(4)">4</button>
-                        <button type="button" class="col-3 btn btn-dark ml-1 mb-2" onclick="Numbers(5)">5</button>
-                        <button type="button" class="col-3 btn btn-dark ml-1 mb-2" onclick="Numbers(6)">6</button>
-                        <button type="button" class="col-2 btn btn-dark ml-1 mb-2" onclick="Operator('/')">/</button>
+                        <button type="button" class="col-3 btn btn-dark mb-lg-2 mb-md-4 py-md-3 py-lg-2 fontSize mx-auto"  onclick="Numbers(4)">4</button>
+                        <button type="button" class="col-3 btn btn-dark ml-md-2 mb-md-4 ml-lg-1 mb-lg-2 fontSize mx-auto" onclick="Numbers(5)">5</button>
+                        <button type="button" class="col-3 btn btn-dark ml-md-2 mb-md-4 ml-lg-1 mb-lg-2 fontSize mx-auto" onclick="Numbers(6)">6</button>
+                        <button type="button" class="col-2 btn btn-dark ml-md-2 mb-md-4 ml-lg-1 mb-lg-2 fontSize mx-auto" onclick="Operator('/')">/</button>
 
-                        <button type="button" class="col-3 btn btn-dark ml mb-2" onclick="Numbers(1)">1</button>
-                        <button type="button" class="col-3 btn btn-dark ml-1 mb-2" onclick="Numbers(2)">2</button>
-                        <button type="button" class="col-3 btn btn-dark ml-1 mb-2" onclick="Numbers(3)">3</button>
-                        <button type="button" class="col-2 btn btn-dark ml-1 mb-2" onclick="Operator('+')">+</button>
+                        <button type="button" class="col-3 btn btn-dark mb-lg-2 mb-md-4 py-md-3 py-lg-2 fontSize mx-auto" onclick="Numbers(1)">1</button>
+                        <button type="button" class="col-3 btn btn-dark ml-md-2 mb-md-4 ml-lg-1 mb-lg-2 fontSize mx-auto" onclick="Numbers(2)">2</button>
+                        <button type="button" class="col-3 btn btn-dark ml-md-2 mb-md-4 ml-lg-1 mb-lg-2 fontSize mx-auto" onclick="Numbers(3)">3</button>
+                        <button type="button" class="col-2 btn btn-dark ml-md-2 mb-md-4 ml-lg-1 mb-lg-2 fontSize mx-auto" onclick="Operator('+')">+</button>
 
-                        <button type="button" class="col-3 btn btn-dark ml mb-3" onclick="Dot()">.</button>
-                        <button type="button" class="col-3 btn btn-dark ml-1 mb-3" onclick="Numbers(0)">0</button>
-                        <button type=" button" class="col-3 btn btn-danger ml-1 mb-3" onclick="Clear()">C</button>
-                        <button type="button" class="col-2 btn btn-dark ml-1 mb-3" onclick="Operator('-')">-</button>
+                        <button type="button" class="col-3 btn btn-dark mb-lg-2 mb-md-4 py-md-3 py-lg-2 fontSize mx-auto" onclick="Dot()">.</button>
+                        <button type="button" class="col-3 btn btn-dark ml-md-2 mb-lg-2 mb-md-4 ml-lg-1 fontSize mx-auto" onclick="Numbers(0)">0</button>
+                        <button type="button" class="col-3 btn btn-danger ml-md-2 mb-lg-2 mb-md-4 ml-lg-1 fontSize mx-auto" onclick="Clear()">C</button>
+                        <button type="button" class="col-2 btn btn-dark ml-md-2 mb-lg-2 mb-md-4 ml-lg-1 fontSize mx-auto" onclick="Operator('-')">-</button>
+
+                        <button type="button" class="col-12 btn btn-dark mb-3 py-md-3 py-lg-2 fontSize mx-auto" onclick="Calc()">=</button>
                     </div>
                 </div>
 
-                <div class="col-4 ml-4 px-3">
+                <div class="col-4 ml-4 px-3" style="display: none;">
                     <div id='newP' class="col bg-light rounded-lg pt-2" style="box-shadow: 0 0 5px black;">
                         <p class="navbar-brand col-12" style="font-size: 24px;" id="answer">History </p>
                         <hr class="bg-dark my-0">
                     </div>
                 </div>
+
+                
 
             </div>
         </div>

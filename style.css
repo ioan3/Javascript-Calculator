@@ -1,0 +1,39 @@
+@media (min-width: 768px) {
+    .fontSize {
+        font-size: 34px;
+    }
+    .formHeight {
+        height: 5rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .fontSize {
+        font-size: 18px;
+    }
+    .formHeight {
+        height: 2.5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .fontSize {
+        font-size: 15px;
+    }
+    .formHeight {
+        height: 3rem;
+    }
+}
+
+.pbN-2, .pyN-2 {
+    padding-bottom: 0.65rem !important;
+}
+
+.ptN-2, .pyN-2 {
+    padding-top: 0.65rem !important;
+}
+
+.colN-11 {
+    flex: 0 0 95.666667%;
+    max-width: 95.666667%;
+}

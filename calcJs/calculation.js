@@ -36,6 +36,7 @@ function Clear() {
     ValueBox.value = '';
     dotCounter = false;
     operatorCounter = false;
+    hasDot = false;
 }
 
 
@@ -49,8 +50,8 @@ function Calc() {
 
         var P = document.createElement('p');
         P.className = 'navbar-brand col-12';
-        P.innerHTML = "(" + ValueBox.value + ")" + " = " + Result;
         P.style.fontSize = "18px";
+        P.innerHTML = "<strong>" + ValueBox.value + "</strong>" + " = " + Result;
         document.getElementById('newP').appendChild(P);
     }
     
